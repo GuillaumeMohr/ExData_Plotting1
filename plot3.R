@@ -38,6 +38,7 @@ png('plot3.png', width = 480, height = 480, units = 'px')
 Sys.setlocale('LC_TIME', 'en_US.UTF-8')
 
 # Makes the expected plot
+par(bg = 'transparent')
 plot(dat$DateTime, dat$Sub_metering_1, type = 'l', col = 'black',
      xlab = '', ylab = 'Energy sub metering')
 points(dat$DateTime, dat$Sub_metering_2, type = 'l', col = 'red')

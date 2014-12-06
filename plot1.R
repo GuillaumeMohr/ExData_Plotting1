@@ -32,9 +32,11 @@ dat <- read.csv(file = 'hpc.txt', na.strings = '?', sep = ';',
 png('plot1.png', width = 480, height = 480, units = 'px')
 
 # Makes the expected plot
+par(bg = 'transparent')
 hist(dat$Global_active_power, col = 'red', 
      xlab = 'Global Active Power (kilowatts)', 
      main = 'Global Active Power')
 
 # Writes to the file
 dev.off()
+

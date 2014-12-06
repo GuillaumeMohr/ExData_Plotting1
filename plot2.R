@@ -38,6 +38,7 @@ png('plot2.png', width = 480, height = 480, units = 'px')
 Sys.setlocale('LC_TIME', 'en_US.UTF-8')
 
 # Makes the expected plot
+par(bg = 'transparent')
 plot(dat$DateTime, dat$Global_active_power, type = 'l',
      xlab = '', ylab = 'Global Active Power (kilowatts)')
 

@@ -38,7 +38,7 @@ png('plot4.png', width = 480, height = 480, units = 'px')
 Sys.setlocale('LC_TIME', 'en_US.UTF-8')
 
 # Set the frame for 4 plots
-par(mfcol = c(2, 2))
+par(mfcol = c(2, 2), bg = 'transparent')
 
 # Makes the top-left plot
 plot(dat$DateTime, dat$Global_active_power, type = 'l',
