@@ -2,8 +2,16 @@
 # Script that creates the graph plot1.png
 #########################################
 
-## READS THE DATA quickly and without using more memory than necessary
-## Works only on Mac / Linux  systems
+##
+## READS THE DATA
+##
+# the method I used to extract the data 
+# (i) is quick (less than a second on my computer, as standard laptop), 
+# (ii) does not use more memory than necessary (only load the required data),
+# (iii) does not require the installation of extra R-packages. 
+# However, the code is only usable on unix-based OS (Mac and Linux), not windows.
+
+# Works only on Mac / Linux  systems
 if(.Platform$OS.type != 'unix')
     stop('The current OS is not unix-based.')
 
@@ -17,8 +25,9 @@ system('grep "^[12]/2/2007" household_power_consumption.txt >> hpc.txt')
 dat <- read.csv(file = 'hpc.txt', na.strings = '?', sep = ';',
                 colClasses =  c(rep('character', 2), rep('numeric', 7)))
 
-
+##
 ## CONSTRUCTS THE PLOT
+##
 # Set the device as a PNG file
 png('plot1.png', width = 480, height = 480, units = 'px')
 

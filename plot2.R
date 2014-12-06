@@ -2,8 +2,16 @@
 # Script that creates the graph plot2.png
 #########################################
 
-## READS THE DATA quickly and without using more memory than necessary
-## Works only on Mac / Linux  systems
+##
+## READS THE DATA
+##
+# the method I used to extract the data 
+# (i) is quick (less than a second on my computer, as standard laptop), 
+# (ii) does not use more memory than necessary (only load the required data),
+# (iii) does not require the installation of extra R-packages. 
+# However, the code is only usable on unix-based OS (Mac and Linux), not windows.
+
+# Works only on Mac / Linux  systems
 if(.Platform$OS.type != 'unix')
     stop('The current OS is not unix-based.')
 
