@@ -50,7 +50,7 @@ plot(dat$DateTime, dat$Sub_metering_1, type = 'l', col = 'black',
 points(dat$DateTime, dat$Sub_metering_2, type = 'l', col = 'red')
 points(dat$DateTime, dat$Sub_metering_3, type = 'l', col = 'blue')
 legend('topright', legend = colnames(dat)[7:9], col = c('black','red','blue'),
-       lty = 1)
+       lty = 1, box.lty = 0)
 
 # Makes the top-right plot
 plot(dat$DateTime, dat$Voltage, type = 'l',
