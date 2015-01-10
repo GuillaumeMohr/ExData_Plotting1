@@ -95,8 +95,8 @@ plot3 <- function() {
     par(bg = 'transparent')
     plot(dat$DateTime, dat$Sub_metering_1, type = 'l', col = 'black',
          xlab = '', ylab = 'Energy sub metering')
-    points(dat$DateTime, dat$Sub_metering_2, type = 'l', col = 'red')
-    points(dat$DateTime, dat$Sub_metering_3, type = 'l', col = 'blue')
+    lines(dat$DateTime, dat$Sub_metering_2, type = 'l', col = 'red')
+    lines(dat$DateTime, dat$Sub_metering_3, type = 'l', col = 'blue')
     legend('topright', legend = colnames(dat)[7:9], col = c('black','red','blue'),
            lty = 1)
     
